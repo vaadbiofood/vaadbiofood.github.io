@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ועד הנדסת ביוטכנולוגיה ומזון</title>
+<meta name="description" content="אירועים, מרצ׳, חברי הוועד ותיבת הצעות של ועד הנדסת ביוטכנולוגיה ומזון בטכניון">
+<meta property="og:title" content="ועד הנדסת ביוטכנולוגיה ומזון">
+<meta property="og:description" content="תמיד פה בשבילכם ובשבילכן">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Secular+One&display=swap" rel="stylesheet">
+<style id="site-css">
+:root{
+  --bg:#F2F6F4;--surface:#FFFFFF;--surface-2:#E6EFEA;--ink:#13263A;--ink-2:#4A5C6F;
+  --brand:#2B4A6F;--brand-ink:#FFFFFF;--accent:#24885B;--mint:#6CC59A;--mint-soft:#D8EFE3;
+  --gold:#E3A21A;--line:#D5E0DA;--photo:#FFFFFF;
+  --shadow:0 1px 2px rgba(19,38,58,.06),0 10px 28px rgba(19,38,58,.08);
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1623;--surface:#14223A;--surface-2:#1A2B45;--ink:#E7EFEB;--ink-2:#A6B5C4;
+  --brand:#2F5A8A;--brand-ink:#FFFFFF;--accent:#6FD3A0;--mint:#5FBF8F;--mint-soft:#163A2F;
+  --gold:#F0B53A;--line:#23354F;--photo:#F4F4F4;--shadow:none;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1623;--surface:#14223A;--surface-2:#1A2B45;--ink:#E7EFEB;--ink-2:#A6B5C4;
+  --brand:#2F5A8A;--brand-ink:#FFFFFF;--accent:#6FD3A0;--mint:#5FBF8F;--mint-soft:#163A2F;
+  --gold:#F0B53A;--line:#23354F;--photo:#F4F4F4;--shadow:none;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+html,body{height:auto}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Assistant',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3{font-family:'Secular One','Assistant',system-ui,sans-serif;font-weight:400;line-height:1.15;margin:0;color:var(--ink)}
+img,video{max-width:100%;display:block}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+
+/* announcement */
+.banner{background:var(--gold);color:#2A1E00;font-weight:700;display:flex;gap:12px;align-items:center;justify-content:center;padding:10px 16px;text-align:center;flex-wrap:wrap}
+.banner a{color:#2A1E00}
+.banner .x{background:none;border:0;color:inherit;font-size:1.1rem;padding:2px 8px}
+.banner.off{background:var(--surface-2);color:var(--ink-2);font-weight:400}
+
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.brand img{width:40px;height:40px;border-radius:50%;background:#fff;object-fit:cover}
+.brand span{font-family:'Secular One',sans-serif;font-size:1.05rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topnav{display:none;margin-inline-start:auto;gap:4px}
+.topnav a{color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+.topnav a:hover{background:var(--surface-2)}
+@media (min-width:880px){.topnav{display:flex}}
+
+/* hero */
+.hero{display:grid;gap:22px;padding-block:28px 8px;align-items:center}
+.hero .logo{width:min(44vw,210px);aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin-inline:auto}
+.hero .logo img,.hero .logo video{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(2.1rem,7.4vw,3.9rem);text-align:center;text-wrap:balance}
+.hero .tag{font-size:clamp(1.15rem,3.6vw,1.45rem);color:var(--accent);text-align:center;margin:.35rem 0 0;font-weight:700}
+.hero .sub{color:var(--ink-2);text-align:center;margin:.2rem 0 0}
+@media (min-width:880px){
+  .hero{grid-template-columns:1fr 300px;padding-block:56px 12px}
+  .hero h1,.hero .tag,.hero .sub{text-align:start}
+  .hero .logo{width:280px;grid-column:2;grid-row:1}
+  .hero .txt{grid-column:1;grid-row:1}
+}
+.ticket{position:relative;background:var(--brand);color:var(--brand-ink);border-radius:20px;padding:18px 22px 20px;margin-top:22px;display:grid;gap:4px;max-width:560px;margin-inline:auto}
+@media (min-width:880px){.ticket{margin-inline:0}}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--bg)}
+.ticket::before{right:-11px}.ticket::after{left:-11px}
+.ticket .k{font-size:.95rem;opacity:.85}
+.ticket h3{color:var(--brand-ink);font-size:1.45rem}
+.ticket .when{opacity:.9}
+.cd{display:flex;gap:18px;margin-top:8px}
+.cd div{display:grid;justify-items:center;min-width:52px}
+.cd b{font-family:'Secular One',sans-serif;font-weight:400;font-size:2rem;line-height:1;color:var(--gold)}
+.cd small{font-size:.85rem;opacity:.85}
+.ticket.empty{background:var(--surface);color:var(--ink);border:1px dashed var(--line)}
+.ticket.empty h3{color:var(--ink);font-size:1.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;justify-content:center}
+@media (min-width:880px){.chips{justify-content:flex-start}}
+.chip{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;border-radius:999px;padding:8px 16px;font-weight:600}
+.chip:hover{border-color:var(--accent)}
+
+/* sections */
+.sec{padding-block:56px 4px}
+.sec-head{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.sec h2{font-size:clamp(1.75rem,5vw,2.5rem)}
+.lead{color:var(--ink-2);margin:.4rem 0 1.4rem;max-width:62ch}
+.empty-note{background:var(--surface);border:1px dashed var(--line);border-radius:16px;padding:22px;color:var(--ink-2);text-align:center}
+
+/* events */
+.events{display:grid;gap:14px}
+@media (min-width:760px){.events{grid-template-columns:1fr 1fr}}
+.ev{display:grid;grid-template-columns:72px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px;align-items:start}
+.ev .d{background:var(--mint-soft);border-radius:14px;display:grid;justify-items:center;padding:8px 4px;color:var(--ink)}
+.ev .d b{font-family:'Secular One',sans-serif;font-weight:400;font-size:1.9rem;line-height:1.1}
+.ev h3{font-size:1.2rem}
+.ev p{margin:.25rem 0 0;color:var(--ink-2)}
+.ev .m{grid-column:1/-1;border-radius:12px;overflow:hidden}
+.ev .m img,.ev .m video{width:100%;max-height:340px;object-fit:cover}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.member{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px;text-align:center;color:var(--ink);display:grid;gap:8px;align-content:start}
+.member .pic{aspect-ratio:1;border-radius:14px;overflow:hidden;background:var(--mint-soft);position:relative;display:grid;place-items:center}
+.member .pic > *{grid-area:1/1;width:100%;height:100%;object-fit:cover}
+.member .ph-init{font-family:'Secular One',sans-serif;font-size:2.6rem;color:var(--accent);display:grid;place-items:center}
+.member .gif{opacity:0;transition:opacity .25s}
+.member.flip .gif{opacity:1}
+.member .nm{font-weight:700;line-height:1.25}
+.member .rl{color:var(--ink-2);font-size:.95rem;line-height:1.3}
+.member .bio{font-size:.92rem;color:var(--ink-2);margin:0}
+.member .hint{font-size:.8rem;color:var(--accent);font-weight:700}
+button.member{border:1px solid var(--line);font:inherit}
+
+/* merch */
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.prod .ph{aspect-ratio:1;background:var(--photo);display:grid;place-items:center;position:relative}
+.prod .ph img,.prod .ph video{width:100%;height:100%;object-fit:cover}
+.prod .soon{display:grid;justify-items:center;gap:6px;color:#5B6B7B;font-weight:600}
+.prod .soon span{font-size:3.2rem}
+.prod .bd{padding:12px 14px 16px;display:grid;gap:8px}
+.prod h3{font-size:1.15rem}
+.prod .ds{color:var(--ink-2);margin:0;font-size:.97rem}
+.prod .price{font-weight:700}
+.sws{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.sw{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);padding:0}
+.sw[aria-pressed="true"]{outline:3px solid var(--accent);outline-offset:2px}
+.sw-name{color:var(--ink-2);font-size:.95rem}
+.order{margin-top:22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.order p{margin:0;flex:1 1 260px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:12px 20px;font-weight:700;text-decoration:none;background:var(--brand);color:var(--brand-ink);min-height:46px}
+.btn.gold{background:var(--gold);color:#2A1E00}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+/* did you know */
+.dyk{display:grid;justify-items:center;gap:18px}
+.petri{position:relative;width:min(88vw,440px);aspect-ratio:1;border-radius:50%;background:var(--mint-soft);box-shadow:inset 0 0 0 12px color-mix(in srgb,var(--surface-2) 80%,#fff 20%),inset 0 0 0 14px var(--line),var(--shadow);display:grid;place-items:center;overflow:hidden}
+.petri .col{position:absolute;border-radius:50%;opacity:.75}
+.petri .fact{position:relative;padding:20%;text-align:center;display:grid;gap:8px;justify-items:center}
+.petri .fact .e{font-size:2.4rem;line-height:1}
+.petri .fact p{margin:0;font-size:clamp(1rem,3.7vw,1.18rem);font-weight:600;line-height:1.45}
+.petri.pop .fact{animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.gal figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gal img,.gal video{width:100%;aspect-ratio:4/5;object-fit:cover}
+.gal figcaption{padding:8px 12px;font-size:.92rem;color:var(--ink-2)}
+
+/* ideas */
+.ideas{background:var(--brand);color:var(--brand-ink);border-radius:24px;padding:28px 24px;display:grid;gap:14px;justify-items:start}
+.ideas h2{color:var(--brand-ink)}
+.ideas p{margin:0;max-width:56ch;opacity:.95}
+
+footer{padding:56px 20px 28px;text-align:center;color:var(--ink-2);font-size:.95rem}
+footer a{font-weight:700}
+
+/* mobile tab bar */
+.tabbar{position:fixed;bottom:0;inset-inline:0;z-index:25;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabbar a{display:grid;justify-items:center;gap:0;padding:8px 2px 7px;text-decoration:none;color:var(--ink);font-size:.78rem;font-weight:600}
+.tabbar a span{font-size:1.3rem;line-height:1.3}
+main{padding-bottom:70px}
+@media (min-width:880px){.tabbar{display:none}main{padding-bottom:0}}
+
+.toast{position:fixed;top:calc(env(safe-area-inset-top,0px) + 74px);inset-inline:0;margin-inline:auto;width:max-content;max-width:90vw;z-index:60;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:600}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="site-data" type="application/json">{"announcement": {"on": false, "text": "", "link": ""}, "hero": {"title": "ועד הנדסת ביוטכנולוגיה ומזון", "short": "ועד ביוטכנולוגיה ומזון", "tagline": "תמיד פה בשבילכם ובשבילכן", "sub": "הפקולטה להנדסת ביוטכנולוגיה ומזון, הטכניון", "logo": "images/logo.jpg"}, "links": [{"emoji": "📸", "label": "אינסטגרם", "url": "https://www.instagram.com/vaad_biofood"}], "events": [], "team": [{"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}], "merch": {"text": "בוחרים מוצר וצבע, ממלאים טופס הזמנה קצר, ומשלמים בפקולטה.", "formUrl": ""}, "products": [{"name": "כובע מצחייה", "price": "", "desc": "כובע כותנה עם רקמה בצבע זהב.", "emoji": "🧢", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/cap_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/cap_white.jpg"}, {"color": "שחור", "hex": "#1A1A1A", "image": "images/cap_black.jpg"}]}, {"name": "כובע באקט", "price": "", "desc": "כובע טמבל עם רקמה בצבע זהב.", "emoji": "👒", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/bucket_navy.jpg"}, {"color": "בז׳", "hex": "#D9CBB0", "image": "images/bucket_beige.jpg"}, {"color": "שמנת", "hex": "#EFE9DC", "image": "images/bucket_cream.jpg"}]}, {"name": "חולצת דרייפיט", "price": "", "desc": "חולצה נושמת עם לוגו רקום על החזה.", "emoji": "👕", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/tee_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/tee_white.jpg"}]}, {"name": "קפוצ׳ון", "price": "", "desc": "", "emoji": "🧥", "variants": []}, {"name": "חלוק מעבדה", "price": "", "desc": "", "emoji": "🥼", "variants": []}], "facts": [{"emoji": "🧀", "text": "רוב הגבינות היום מיוצרות עם כימוזין שמופק ממיקרואורגניזמים מהונדסים, במקום אנזים שהופק בעבר מקיבה של עגלים."}, {"emoji": "💉", "text": "האינסולין היה התרופה הראשונה מהנדסה גנטית שאושרה לשימוש, ב־1982. מייצרים אותו בחיידקים ובשמרים."}, {"emoji": "🍯", "text": "דבש כמעט לא מתקלקל: יש בו מעט מאוד מים זמינים והוא חומצי, אז חיידקים פשוט לא מצליחים לגדול בו."}, {"emoji": "🧫", "text": "הפניצילין התגלה ב־1928 כשעובש זיהם בטעות צלחת פטרי במעבדה של אלכסנדר פלמינג."}, {"emoji": "🍷", "text": "לואי פסטר פיתח את הפסטור בשנות ה־60 של המאה ה־19, במקור כדי למנוע קלקול של יין."}, {"emoji": "🍞", "text": "השמרים שמתפיחים את הלחם והשמרים שמתסיסים בירה הם בדרך כלל אותו מין בדיוק."}, {"emoji": "🧬", "text": "אם נמתח את כל ה־DNA שבתא אנושי אחד לקו ישר, הוא יגיע לאורך של כשני מטרים."}, {"emoji": "🌶️", "text": "את החריפות של פלפלים מודדים בסולם סקוביל, שנקרא על שם הרוקח וילבר סקוביל שהמציא אותו ב־1912."}], "gallery": [{"src": "images/poster.jpg", "caption": "יריד סוף השנה של הפקולטה"}], "ideas": {"text": "רעיון לאירוע, בקשה, או משהו שמפריע לכם בפקולטה? כתבו לנו. הטופס אנונימי: לא נאסף שם ולא כתובת מייל.", "formUrl": ""}}</script>
+<script id="app-js">
+(function(){
+"use strict";
+const app = document.getElementById('app');
+const dataEl = document.getElementById('site-data');
+const DEFAULTS = JSON.parse(dataEl.textContent);
+let data = DEFAULTS;
+
+const MONTHS = ['בינואר','בפברואר','במרץ','באפריל','במאי','ביוני','ביולי','באוגוסט','בספטמבר','באוקטובר','בנובמבר','בדצמבר'];
+const MSHORT = ['ינו׳','פבר׳','מרץ','אפר׳','מאי','יוני','יולי','אוג׳','ספט׳','אוק׳','נוב׳','דצמ׳'];
+const DAYS = ['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
+
+const editing = false;
+const sel = {};
+let factIdx = Math.floor(Math.random() * Math.max(1, (data.facts||[]).length));
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function safeUrl(u){
+  u = String(u || '').trim();
+  if (!u) return '';
+  if (/^(https?:|mailto:|tel:)/i.test(u) || /^data:(image|video)\//i.test(u) || /^images\/[\w.\-]+$/i.test(u) || u.startsWith('#')) return u;
+  if (/^www\./i.test(u)) return 'https://' + u;
+  return '';
+}
+const isVideo = s => /^data:video\//i.test(s) || /\.(mp4|webm|mov)(\?|#|$)/i.test(s) || /#video$/.test(s);
+function media(src, alt, cls){
+  src = safeUrl(src); if (!src) return '';
+  return isVideo(src)
+    ? `<video class="${cls||''}" src="${esc(src)}" autoplay muted loop playsinline></video>`
+    : `<img class="${cls||''}" src="${esc(src)}" alt="${esc(alt||'')}"${/^data:/.test(src) ? '' : ' loading="lazy"'}>`;
+}
+function parseDate(s){ if(!s) return null; const d = new Date(s); return isNaN(d) ? null : d; }
+const pad = n => String(n).padStart(2,'0');
+function whenText(d){ return `יום ${DAYS[d.getDay()]}, ${d.getDate()} ${MONTHS[d.getMonth()]}, בשעה ${pad(d.getHours())}:${pad(d.getMinutes())}`; }
+function upcoming(){
+  const now = Date.now();
+  return (data.events||[]).map(e => ({e, d: parseDate(e.date)}))
+    .filter(x => x.d && x.d.getTime() > now - 3*3600e3)
+    .sort((a,b) => a.d - b.d);
+}
+const editBtn = () => '';
+function lsGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function lsSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+/* ---------- sections ---------- */
+function banner(){
+  const a = data.announcement || {};
+  if (!a.on || !a.text) return editing ? `<div class="banner off">אין הודעה פעילה בראש העמוד ${editBtn('announcement')}</div>` : '';
+  if (!editing && lsGet('dismiss:' + a.text) === '1') return '';
+  const link = safeUrl(a.link);
+  return `<div class="banner" role="status"><span>${esc(a.text)}</span>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">לפרטים</a>` : ''}<button class="x" data-act="dismiss" aria-label="סגירת ההודעה">✕</button>${editBtn('announcement')}</div>`;
+}
+function topbar(){
+  const h = data.hero || {};
+  return `<header class="topbar"><div class="wrap">
+    <a class="brand" href="#top">${safeUrl(h.logo) ? `<img src="${esc(safeUrl(h.logo))}" alt="">` : ''}<span>${esc(h.short || h.title)}</span></a>
+    <nav class="topnav" aria-label="ניווט">
+      <a href="#events">אירועים</a><a href="#team">הוועד</a><a href="#merch">מרצ׳</a><a href="#dyk">הידעת?</a><a href="#gallery">גלריה</a><a href="#ideas">רעיונות</a>
+    </nav></div></header>`;
+}
+function ticket(){
+  const n = upcoming()[0];
+  if (!n) return `<div class="ticket empty"><span class="k">האירוע הבא</span><h3>עוד לא נקבע. הוא יופיע כאן ברגע שיתפרסם</h3></div>`;
+  return `<a class="ticket" href="#events" style="text-decoration:none"><span class="k">האירוע הבא</span><h3>${esc(n.e.title)}</h3>
+    <span class="when">${esc(whenText(n.d))}${n.e.place ? ', ' + esc(n.e.place) : ''}</span>
+    <div class="cd" id="cd" data-t="${n.d.getTime()}" aria-live="off"></div></a>`;
+}
+function hero(){
+  const h = data.hero || {};
+  const links = (data.links||[]).filter(l => safeUrl(l.url));
+  return `<section class="wrap hero" id="top">
+    <div class="logo">${media(h.logo, h.title) || ''}</div>
+    <div class="txt">
+      <h1>${esc(h.title)}</h1>
+      ${h.tagline ? `<p class="tag">${esc(h.tagline)}</p>` : ''}
+      ${h.sub ? `<p class="sub">${esc(h.sub)}</p>` : ''}
+      ${ticket()}
+      <div class="chips">${links.map(l => `<a class="chip" href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener"><span aria-hidden="true">${esc(l.emoji)}</span>${esc(l.label)}</a>`).join('')}
+      ${editBtn('hero','כותרת ולוגו')}${editBtn('links','קישורים')}</div>
+    </div></section>`;
+}
+function head(id, title, sec, lead){
+  return `<div class="sec-head"><h2>${title}</h2>${editBtn(sec, sec === 'products' ? 'מוצרים' : '')}</div>${lead ? `<p class="lead">${lead}</p>` : ''}`;
+}
+function events(){
+  const list = upcoming();
+  const body = list.length ? `<div class="events">${list.map(({e,d}) => `<article class="ev">
+      <div class="d" aria-hidden="true"><b>${d.getDate()}</b><span>${MSHORT[d.getMonth()]}</span></div>
+      <div><h3>${esc(e.title)}</h3><p>${esc(whenText(d))}${e.place ? '<br>' + esc(e.place) : ''}</p>${e.desc ? `<p>${esc(e.desc)}</p>` : ''}</div>
+      ${safeUrl(e.image) ? `<div class="m">${media(e.image, e.title)}</div>` : ''}
+    </article>`).join('')}</div>`
+    : `<div class="empty-note">אין כרגע אירועים מתוכננים. אירועים חדשים יעלו כאן, ובינתיים אפשר לעקוב באינסטגרם.</div>`;
+  return `<section class="wrap sec" id="events">${head('events','אירועים קרובים','events')}<div style="height:14px"></div>${body}</section>`;
+}
+function initials(n){ n = String(n||'').trim(); return n ? n[0] : '🙂'; }
+function team(){
+  const t = data.team || [];
+  const cards = t.map((m,i) => {
+    const hasGif = !!safeUrl(m.gif);
+    const pic = safeUrl(m.photo) ? media(m.photo, m.name) : `<span class="ph-init">${esc(initials(m.name))}</span>`;
+    const gif = hasGif ? `<img class="gif" data-src="${esc(safeUrl(m.gif))}" alt="">` : '';
+    const inner = `<div class="pic">${pic}${gif}</div><div class="nm">${esc(m.name)}</div><div class="rl">${esc(m.role)}</div>${m.bio ? `<p class="bio">${esc(m.bio)}</p>` : ''}${hasGif ? `<span class="hint">לחצו עליי 😜</span>` : ''}`;
+    return hasGif ? `<button class="member" data-act="member" aria-label="${esc(m.name)}, הצגת GIF">${inner}</button>` : `<div class="member">${inner}</div>`;
+  }).join('');
+  return `<section class="wrap sec" id="team">${head('team','מי בוועד?','team','לחצו על הכרטיס כדי לראות אותנו בגרסה הפחות רצינית.')}
+    ${t.length ? `<div class="team">${cards}</div>` : `<div class="empty-note">הכרות עם חברי הוועד תעלה בקרוב.</div>`}</section>`;
+}
+function prodCard(p, i){
+  const v = p.variants || [];
+  const k = Math.min(sel[i] || 0, Math.max(0, v.length - 1));
+  const cur = v[k];
+  const img = cur && safeUrl(cur.image) ? media(cur.image, `${p.name}, ${cur.color}`) : `<div class="soon"><span aria-hidden="true">${esc(p.emoji || '🛍️')}</span>תמונות יעלו בקרוב</div>`;
+  const sws = v.length > 1 ? `<div class="sws" role="group" aria-label="בחירת צבע">${v.map((x,j) => `<button class="sw" data-act="sw" data-p="${i}" data-v="${j}" aria-pressed="${j===k}" aria-label="${esc(x.color)}" title="${esc(x.color)}" style="background:${/^#[0-9a-f]{3,8}$/i.test(x.hex||'') ? x.hex : '#ccc'}"></button>`).join('')}<span class="sw-name">${esc(cur ? cur.color : '')}</span></div>`
+    : (cur && cur.color ? `<span class="sw-name">${esc(cur.color)}</span>` : '');
+  return `<article class="prod" data-prod="${i}"><div class="ph">${img}</div><div class="bd"><h3>${esc(p.name)}</h3>${p.desc ? `<p class="ds">${esc(p.desc)}</p>` : ''}${sws}<span class="price">${p.price ? esc(p.price) : 'מחיר יפורסם בקרוב'}</span></div></article>`;
+}
+function merch(){
+  const m = data.merch || {}; const f = safeUrl(m.formUrl);
+  return `<section class="wrap sec" id="merch">${head('merch','מרצ׳ של הפקולטה','products', esc(m.text || ''))}
+    <div class="prods">${(data.products||[]).map(prodCard).join('')}</div>
+    <div class="order"><p>${f ? 'בחרתם? ההזמנה בטופס קצר, והתשלום בפקולטה.' : 'ההזמנות ייפתחו בקרוב.'}</p>
+      <a class="btn gold" ${f ? `href="${esc(f)}" target="_blank" rel="noopener"` : 'aria-disabled="true"'}>🛒 להזמנה</a>${editBtn('merch','טקסט וטופס הזמנה')}</div></section>`;
+}
+function colonies(){
+  const cols = ['var(--mint)','var(--gold)','#7FA6CF','var(--accent)'];
+  let s = '';
+  for (let i = 0; i < 11; i++){
+    const a = Math.random() * Math.PI * 2, r = 30 + Math.random() * 10, z = 6 + Math.random() * 14;
+    s += `<span class="col" style="width:${z}px;height:${z}px;left:calc(${50 + r*Math.cos(a)}% - ${z/2}px);top:calc(${50 + r*Math.sin(a)}% - ${z/2}px);background:${cols[i % cols.length]}"></span>`;
+  }
+  return s;
+}
+function factHtml(){
+  const f = (data.facts||[])[factIdx];
+  if (!f) return `<div class="fact"><p>עובדות מגניבות יעלו כאן בקרוב.</p></div>`;
+  return `<div class="fact"><span class="e" aria-hidden="true">${esc(f.emoji || '🧪')}</span><p>${esc(f.text)}</p></div>`;
+}
+function dyk(){
+  const n = (data.facts||[]).length;
+  return `<section class="wrap sec" id="dyk">${head('dyk','הידעת?','facts','עובדה קטנה מעולם הביוטכנולוגיה והמזון. רוצים עוד? לחצו.')}
+    <div class="dyk"><div class="petri" id="petri" aria-live="polite">${colonies()}${factHtml()}</div>
+    ${n > 1 ? `<button class="btn" data-act="fact">🔬 עובדה נוספת</button>` : ''}</div></section>`;
+}
+function gallery(){
+  const g = (data.gallery||[]).filter(x => safeUrl(x.src));
+  return `<section class="wrap sec" id="gallery">${head('gallery','מהאירועים שלנו','gallery')}<div style="height:14px"></div>
+    ${g.length ? `<div class="gal">${g.map(x => `<figure>${media(x.src, x.caption)}${x.caption ? `<figcaption>${esc(x.caption)}</figcaption>` : ''}</figure>`).join('')}</div>` : `<div class="empty-note">תמונות מאירועים יעלו כאן.</div>`}</section>`;
+}
+function ideas(){
+  const s = data.ideas || {}; const f = safeUrl(s.formUrl);
+  return `<section class="wrap sec" id="ideas"><div class="ideas"><h2>יש לכם רעיון?</h2><p>${esc(s.text || '')}</p>
+    <a class="btn gold" ${f ? `href="${esc(f)}" target="_blank" rel="noopener"` : 'aria-disabled="true"'}>💡 ${f ? 'לטופס ההצעות' : 'הטופס ייפתח בקרוב'}</a>${editBtn('ideas')}</div></section>`;
+}
+function footer(){
+  const ig = (data.links||[]).find(l => /instagram/i.test(l.url||''));
+  return `<footer>${esc((data.hero||{}).title)}${ig ? `<br><a href="${esc(safeUrl(ig.url))}" target="_blank" rel="noopener">עקבו אחרינו באינסטגרם</a>` : ''}</footer>`;
+}
+function tabbar(){
+  return `<nav class="tabbar" aria-label="ניווט מהיר"><a href="#top"><span aria-hidden="true">🏠</span>בית</a><a href="#events"><span aria-hidden="true">📅</span>אירועים</a><a href="#team"><span aria-hidden="true">👋</span>הוועד</a><a href="#merch"><span aria-hidden="true">🧢</span>מרצ׳</a><a href="#ideas"><span aria-hidden="true">💡</span>רעיונות</a></nav>`;
+}
+function editChrome(){ return ''; }
+function render(){
+  document.title = (data.hero||{}).title || document.title;
+  app.innerHTML = banner() + topbar() + `<main>` + hero() + events() + team() + merch() + dyk() + gallery() + ideas() + footer() + `</main>` + tabbar() + editChrome();
+  tick();
+}
+function tick(){
+  const el = document.getElementById('cd'); if (!el) return;
+  let ms = +el.dataset.t - Date.now();
+  if (ms <= 0){ el.innerHTML = `<div><b>🎉</b><small>זה קורה עכשיו</small></div>`; return; }
+  const d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
+  el.innerHTML = `<div><b>${d}</b><small>ימים</small></div><div><b>${h}</b><small>שעות</small></div><div><b>${m}</b><small>דקות</small></div>`;
+}
+setInterval(tick, 20000);
+function toast(msg, ms){
+  const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; t.setAttribute('role','status');
+  document.body.appendChild(t); setTimeout(() => t.remove(), ms || 3500);
+}
+
+/* ---------- clicks ---------- */
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const a = b.dataset.act;
+  if (a === 'dismiss'){ lsSet('dismiss:' + (data.announcement||{}).text, '1'); b.closest('.banner').remove(); }
+  else if (a === 'sw'){ const i = +b.dataset.p; sel[i] = +b.dataset.v; const card = document.querySelector(`[data-prod="${i}"]`); if (card) card.outerHTML = prodCard(data.products[i], i); const nb = document.querySelector(`[data-prod="${i}"] .sw[data-v="${b.dataset.v}"]`); if (nb) nb.focus(); }
+  else if (a === 'member'){ const g = b.querySelector('.gif'); if (g && !g.src) g.src = g.dataset.src; b.classList.toggle('flip'); }
+  else if (a === 'fact'){
+    const n = (data.facts||[]).length; if (n < 2) return;
+    let k; do { k = Math.floor(Math.random() * n); } while (k === factIdx); factIdx = k;
+    const p = document.getElementById('petri'); p.classList.remove('pop'); p.innerHTML = colonies() + factHtml(); void p.offsetWidth; p.classList.add('pop');
+  }
+});
+/* ---------- תוכן מגוגל שיטס ---------- */
+// מזהה הגיליון: החלק שבין /d/ ל־/edit בכתובת של הגיליון. אם ריק, האתר מציג את תוכן ברירת המחדל.
+const SHEET_ID = '';
+const TABS = {settings:'הגדרות', events:'אירועים', team:'ועד', products:'מוצרים', facts:'הידעת', gallery:'גלריה', links:'קישורים'};
+const COLORS = {'שחור':'#1A1A1A','לבן':'#FFFFFF','כחול':'#2F5FA8','כחול כהה':'#1F2E4D','נייבי':'#1F2E4D','תכלת':'#A9CDEB','אפור':'#8A8F96','אפור כהה':'#4A4F55','ירוק':'#2E7D4F','ירוק כהה':'#1F4D36','ירוק בקבוק':'#1F4D36','מנטה':'#9ED9BB','בז':'#D9CBB0','שמנת':'#EFE9DC','קרם':'#EFE9DC','אדום':'#C0392B','בורדו':'#6D1A2A','ורוד':'#F2A7C3','סגול':'#6B4FA0','צהוב':'#F2C230','כתום':'#E67E22','חום':'#7A5230','זהב':'#D4A017'};
+
+function parseCSV(s){
+  const rows = []; let row = [], cur = '', q = false;
+  for (let i = 0; i < s.length; i++){
+    const c = s[i];
+    if (q){ if (c === '"'){ if (s[i+1] === '"'){ cur += '"'; i++; } else q = false; } else cur += c; }
+    else if (c === '"') q = true;
+    else if (c === ','){ row.push(cur); cur = ''; }
+    else if (c === '\n' || c === '\r'){ if (c === '\r' && s[i+1] === '\n') i++; row.push(cur); rows.push(row); row = []; cur = ''; }
+    else cur += c;
+  }
+  if (cur !== '' || row.length){ row.push(cur); rows.push(row); }
+  return rows;
+}
+const norm = h => String(h || '').replace(/[׳'"״`\s]/g, '').trim();
+function toObjects(rows){
+  if (!rows.length) return [];
+  const hs = rows[0].map(norm);
+  return rows.slice(1).filter(r => r.some(c => String(c).trim())).map(r => { const o = {}; hs.forEach((h,i) => o[h] = String(r[i] == null ? '' : r[i]).trim()); return o; });
+}
+const col = (o, name) => o[norm(name)] || '';
+function img(v){
+  v = String(v || '').trim(); if (!v) return '';
+  const g = v.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:.*&)?id=)([\w-]+)/);
+  if (g) return 'https://lh3.googleusercontent.com/d/' + g[1];
+  if (/^https?:\/\//i.test(v)) return v;
+  return 'images/' + v.replace(/^\/?(images\/)?/, '');
+}
+function colorHex(name, hex){
+  if (/^#?[0-9a-f]{6}$/i.test(hex)) return hex[0] === '#' ? hex : '#' + hex;
+  return COLORS[norm(name)] || COLORS[String(name).trim()] || '#CCCCCC';
+}
+function toIso(dateStr, timeStr){
+  dateStr = String(dateStr || '').trim(); if (!dateStr) return '';
+  let y, m, d, mt;
+  if ((mt = dateStr.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/))) { y = +mt[1]; m = +mt[2]; d = +mt[3]; }
+  else if ((mt = dateStr.match(/^(\d{1,2})[./-](\d{1,2})[./-](\d{2,4})/))) { d = +mt[1]; m = +mt[2]; y = +mt[3]; if (y < 100) y += 2000; }
+  else return '';
+  const t = String(timeStr || '').match(/(\d{1,2}):(\d{2})/) || String(dateStr).match(/\s(\d{1,2}):(\d{2})/);
+  const hh = t ? pad(+t[1]) : '12', mm = t ? t[2] : '00';
+  return `${y}-${pad(m)}-${pad(d)}T${hh}:${mm}`;
+}
+function fromSheets(T){
+  const d = JSON.parse(JSON.stringify(DEFAULTS));
+  if (T.settings){
+    const s = {}; T.settings.forEach(r => { s[norm(col(r,'שדה'))] = col(r,'ערך'); });
+    const g = k => s[norm(k)] || '';
+    if (g('כותרת')) d.hero.title = g('כותרת');
+    if (g('שם קצר')) d.hero.short = g('שם קצר');
+    d.hero.tagline = g('סלוגן') || d.hero.tagline;
+    d.hero.sub = g('שורת משנה') || d.hero.sub;
+    if (g('לוגו')) d.hero.logo = img(g('לוגו'));
+    d.announcement = {on: !!g('הודעה'), text: g('הודעה'), link: g('קישור להודעה')};
+    d.merch.text = g('טקסט מרצ') || d.merch.text;
+    d.merch.formUrl = g('טופס הזמנה');
+    d.ideas.text = g('טקסט הצעות') || d.ideas.text;
+    d.ideas.formUrl = g('טופס הצעות');
+  }
+  if (T.events) d.events = T.events.map(r => ({title: col(r,'שם'), date: toIso(col(r,'תאריך'), col(r,'שעה')), place: col(r,'מקום'), desc: col(r,'תיאור'), image: img(col(r,'תמונה'))})).filter(e => e.title && e.date);
+  if (T.team) d.team = T.team.map(r => ({name: col(r,'שם'), role: col(r,'תפקיד'), bio: col(r,'משפט'), photo: img(col(r,'תמונה')), gif: img(col(r,'GIF'))})).filter(m => m.name);
+  if (T.products){
+    const map = new Map();
+    T.products.forEach(r => {
+      const n = col(r,'מוצר'); if (!n) return;
+      if (!map.has(n)) map.set(n, {name: n, desc: '', price: '', emoji: '', variants: []});
+      const p = map.get(n);
+      p.desc = p.desc || col(r,'תיאור'); p.price = p.price || col(r,'מחיר'); p.emoji = p.emoji || col(r,'אימוג׳י');
+      const c = col(r,'צבע'), im = img(col(r,'תמונה'));
+      if (c || im) p.variants.push({color: c, hex: colorHex(c, col(r,'גוון')), image: im});
+    });
+    d.products = [...map.values()];
+  }
+  if (T.facts) d.facts = T.facts.map(r => ({emoji: col(r,'אימוג׳י'), text: col(r,'עובדה')})).filter(f => f.text);
+  if (T.gallery) d.gallery = T.gallery.map(r => ({src: img(col(r,'תמונה')), caption: col(r,'כיתוב')})).filter(x => x.src);
+  if (T.links) d.links = T.links.map(r => ({emoji: col(r,'אימוג׳י'), label: col(r,'טקסט'), url: col(r,'קישור')})).filter(l => l.label && l.url);
+  return d;
+}
+function setData(d){
+  data = d;
+  factIdx = Math.floor(Math.random() * Math.max(1, (data.facts||[]).length));
+  render();
+}
+async function loadSheets(){
+  if (!SHEET_ID) return;
+  const keys = Object.keys(TABS);
+  const res = await Promise.all(keys.map(k =>
+    fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&headers=1&sheet=${encodeURIComponent(TABS[k])}`, {cache: 'no-store'})
+      .then(r => r.ok ? r.text() : null).then(s => s == null || /^\s*</.test(s) ? null : toObjects(parseCSV(s))).catch(() => null)));
+  if (res.every(x => x == null)) return;
+  const T = {}; keys.forEach((k,i) => T[k] = res[i]);
+  const d = fromSheets(T);
+  try { localStorage.setItem('vaad-data', JSON.stringify(d)); } catch(e){}
+  setData(d);
+}
+let cached = null;
+if (SHEET_ID){ try { cached = JSON.parse(localStorage.getItem('vaad-data') || 'null'); } catch(e){} }
+if (cached) data = cached;
+render();
+if (location.hash){ const t = document.getElementById(location.hash.slice(1)); if (t) setTimeout(() => t.scrollIntoView(), 50); }
+loadSheets();
+
+})();
+</script>
+</body>
+</html>
