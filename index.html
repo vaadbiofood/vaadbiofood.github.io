@@ -4,10 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ועד הנדסת ביוטכנולוגיה ומזון</title>
-<meta name="description" content="אירועים, מרצ׳, חברי הוועד ותיבת הצעות של ועד הנדסת ביוטכנולוגיה ומזון בטכניון">
+<meta name="description" content="אירועים, מבחנים, מרצ׳ ותיבת הצעות של ועד הנדסת ביוטכנולוגיה ומזון בטכניון">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vaadbiofood.github.io/">
 <meta property="og:title" content="ועד הנדסת ביוטכנולוגיה ומזון">
-<meta property="og:description" content="תמיד פה בשבילכם ובשבילכן">
+<meta property="og:description" content="תמיד פה בשבילכם ובשבילכן. אירועים, מבחנים, מרצ׳ ועוד.">
+<meta property="og:image" content="https://vaadbiofood.github.io/images/logo.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="400">
+<meta property="og:locale" content="he_IL">
 <link rel="icon" href="images/logo.jpg">
+<link rel="apple-touch-icon" href="images/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Secular+One&display=swap" rel="stylesheet">
@@ -152,6 +159,28 @@ button.member{border:1px solid var(--line);font:inherit}
 .petri.pop .fact{animation:pop .35s ease}
 @keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
 
+.search{width:100%;max-width:420px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:11px 14px;font:inherit;margin-bottom:14px}
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.course{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;gap:10px;align-content:start}
+.course h3{font-size:1.15rem}
+.course .lk{display:flex;flex-wrap:wrap;gap:8px}
+.course .lk a{display:inline-flex;gap:6px;align-items:center;background:var(--mint-soft);color:var(--ink);text-decoration:none;border-radius:10px;padding:6px 12px;font-weight:600;font-size:.95rem}
+.course .lk a:hover{outline:2px solid var(--accent)}
+.course ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;color:var(--ink-2);font-size:.97rem}
+.course li::before{content:"💡 "}
+.faq{display:grid;gap:10px;max-width:780px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 16px}
+.faq summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 14px;color:var(--ink-2);white-space:pre-line}
+.ulinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.ulink{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s}
+.ulink:hover{border-color:var(--accent);transform:translateY(-2px)}
+.ulink .ic{font-size:1.7rem;line-height:1;width:48px;height:48px;border-radius:12px;background:var(--mint-soft);display:grid;place-items:center;flex:none}
+.ulink b{display:block;line-height:1.3}
+.ulink small{color:var(--ink-2);font-size:.92rem;line-height:1.35;display:block}
 /* gallery */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .gal figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
@@ -179,7 +208,7 @@ main{padding-bottom:70px}
 </head>
 <body>
 <div id="app"></div>
-<script id="site-data" type="application/json">{"announcement": {"on": false, "text": "", "link": ""}, "hero": {"title": "ועד הנדסת ביוטכנולוגיה ומזון", "short": "ועד ביוטכנולוגיה ומזון", "tagline": "תמיד פה בשבילכם ובשבילכן", "sub": "הפקולטה להנדסת ביוטכנולוגיה ומזון, הטכניון", "logo": "images/logo.jpg"}, "links": [{"emoji": "📸", "label": "אינסטגרם", "url": "https://www.instagram.com/vaad_biofood"}], "events": [], "team": [{"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}], "merch": {"text": "בוחרים מוצר וצבע, ממלאים טופס הזמנה קצר, ומשלמים בפקולטה.", "formUrl": ""}, "products": [{"name": "כובע מצחייה", "price": "", "desc": "כובע כותנה עם רקמה בצבע זהב.", "emoji": "🧢", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/cap_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/cap_white.jpg"}, {"color": "שחור", "hex": "#1A1A1A", "image": "images/cap_black.jpg"}]}, {"name": "כובע באקט", "price": "", "desc": "כובע טמבל עם רקמה בצבע זהב.", "emoji": "👒", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/bucket_navy.jpg"}, {"color": "בז׳", "hex": "#D9CBB0", "image": "images/bucket_beige.jpg"}, {"color": "שמנת", "hex": "#EFE9DC", "image": "images/bucket_cream.jpg"}]}, {"name": "חולצת דרייפיט", "price": "", "desc": "חולצה נושמת עם לוגו רקום על החזה.", "emoji": "👕", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/tee_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/tee_white.jpg"}]}, {"name": "קפוצ׳ון", "price": "", "desc": "", "emoji": "🧥", "variants": []}, {"name": "חלוק מעבדה", "price": "", "desc": "", "emoji": "🥼", "variants": []}], "facts": [{"emoji": "🧀", "text": "רוב הגבינות היום מיוצרות עם כימוזין שמופק ממיקרואורגניזמים מהונדסים, במקום אנזים שהופק בעבר מקיבה של עגלים."}, {"emoji": "💉", "text": "האינסולין היה התרופה הראשונה מהנדסה גנטית שאושרה לשימוש, ב־1982. מייצרים אותו בחיידקים ובשמרים."}, {"emoji": "🍯", "text": "דבש כמעט לא מתקלקל: יש בו מעט מאוד מים זמינים והוא חומצי, אז חיידקים פשוט לא מצליחים לגדול בו."}, {"emoji": "🧫", "text": "הפניצילין התגלה ב־1928 כשעובש זיהם בטעות צלחת פטרי במעבדה של אלכסנדר פלמינג."}, {"emoji": "🍷", "text": "לואי פסטר פיתח את הפסטור בשנות ה־60 של המאה ה־19, במקור כדי למנוע קלקול של יין."}, {"emoji": "🍞", "text": "השמרים שמתפיחים את הלחם והשמרים שמתסיסים בירה הם בדרך כלל אותו מין בדיוק."}, {"emoji": "🧬", "text": "אם נמתח את כל ה־DNA שבתא אנושי אחד לקו ישר, הוא יגיע לאורך של כשני מטרים."}, {"emoji": "🌶️", "text": "את החריפות של פלפלים מודדים בסולם סקוביל, שנקרא על שם הרוקח וילבר סקוביל שהמציא אותו ב־1912."}], "gallery": [{"src": "images/poster.jpg", "caption": "יריד סוף השנה של הפקולטה"}], "ideas": {"text": "רעיון לאירוע, בקשה, או משהו שמפריע לכם בפקולטה? כתבו לנו. הטופס אנונימי: לא נאסף שם ולא כתובת מייל.", "formUrl": ""}}</script>
+<script id="site-data" type="application/json">{"announcement": {"on": false, "text": "", "link": ""}, "hero": {"title": "ועד הנדסת ביוטכנולוגיה ומזון", "short": "ועד ביוטכנולוגיה ומזון", "tagline": "תמיד פה בשבילכם ובשבילכן", "sub": "הפקולטה להנדסת ביוטכנולוגיה ומזון, הטכניון", "logo": "images/logo.jpg"}, "links": [{"emoji": "📸", "label": "אינסטגרם", "url": "https://www.instagram.com/vaad_biofood", "desc": ""}, {"emoji": "🎓", "label": "פורטל הסטודנטים", "url": "https://portalex.technion.ac.il/irj/portal/external/CampusMob", "desc": "ציונים, רישום ומידע אישי"}, {"emoji": "📘", "label": "מודל", "url": "https://moodle26.technion.ac.il/", "desc": "חומרי הקורסים והגשות"}, {"emoji": "🧀", "label": "צ׳יזפורק", "url": "https://cheesefork.cf/", "desc": "בניית מערכת שעות"}, {"emoji": "📁", "label": "דרייב פקולטי", "url": "https://technionmail.sharepoint.com/sites/bfe-students/SitePages/Files.aspx", "desc": "קבצים וחומרים של סטודנטי הפקולטה"}, {"emoji": "📝", "label": "הכנה למבחנים של בני קרצון", "url": "https://bfe.technionprep.com/", "desc": "תרגול והכנה למבחנים בקורסי הפקולטה"}], "events": [], "team": [{"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}, {"name": "שם חבר/ת הוועד", "role": "תפקיד", "bio": "", "photo": "", "gif": ""}], "merch": {"text": "בוחרים מוצר וצבע, ממלאים טופס הזמנה קצר, ומשלמים בפקולטה.", "formUrl": ""}, "products": [{"name": "כובע מצחייה", "price": "", "desc": "כובע כותנה עם רקמה בצבע זהב.", "emoji": "🧢", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/cap_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/cap_white.jpg"}, {"color": "שחור", "hex": "#1A1A1A", "image": "images/cap_black.jpg"}]}, {"name": "כובע באקט", "price": "", "desc": "כובע טמבל עם רקמה בצבע זהב.", "emoji": "👒", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/bucket_navy.jpg"}, {"color": "בז׳", "hex": "#D9CBB0", "image": "images/bucket_beige.jpg"}, {"color": "שמנת", "hex": "#EFE9DC", "image": "images/bucket_cream.jpg"}]}, {"name": "חולצת דרייפיט", "price": "", "desc": "חולצה נושמת עם לוגו רקום על החזה.", "emoji": "👕", "variants": [{"color": "כחול כהה", "hex": "#1F2E4D", "image": "images/tee_navy.jpg"}, {"color": "לבן", "hex": "#FFFFFF", "image": "images/tee_white.jpg"}]}, {"name": "קפוצ׳ון", "price": "", "desc": "קפוצ׳ון עם הדפס הפקולטה.", "emoji": "🧥", "variants": [{"color": "אפור", "hex": "#7E8C96", "image": "images/hoodie_gray.jpg"}, {"color": "ירוק בקבוק", "hex": "#22513D", "image": "images/hoodie_green.jpg"}, {"color": "תכלת", "hex": "#A9CFEC", "image": "images/hoodie_lightblue.jpg"}]}, {"name": "חלוק מעבדה", "price": "", "desc": "שרוול ארוך עם גומי בקצה, לוגו הפקולטה ורקמת שם אישית.", "emoji": "🥼", "variants": [{"color": "לבן", "hex": "#FFFFFF", "image": "images/labcoat.jpg"}]}], "facts": [{"emoji": "🧀", "text": "רוב הגבינות היום מיוצרות עם כימוזין שמופק ממיקרואורגניזמים מהונדסים, במקום אנזים שהופק בעבר מקיבה של עגלים."}, {"emoji": "💉", "text": "האינסולין היה התרופה הראשונה מהנדסה גנטית שאושרה לשימוש, ב־1982. מייצרים אותו בחיידקים ובשמרים."}, {"emoji": "🍯", "text": "דבש כמעט לא מתקלקל: יש בו מעט מאוד מים זמינים והוא חומצי, אז חיידקים פשוט לא מצליחים לגדול בו."}, {"emoji": "🧫", "text": "הפניצילין התגלה ב־1928 כשעובש זיהם בטעות צלחת פטרי במעבדה של אלכסנדר פלמינג."}, {"emoji": "🍷", "text": "לואי פסטר פיתח את הפסטור בשנות ה־60 של המאה ה־19, במקור כדי למנוע קלקול של יין."}, {"emoji": "🍞", "text": "השמרים שמתפיחים את הלחם והשמרים שמתסיסים בירה הם בדרך כלל אותו מין בדיוק."}, {"emoji": "🧬", "text": "אם נמתח את כל ה־DNA שבתא אנושי אחד לקו ישר, הוא יגיע לאורך של כשני מטרים."}, {"emoji": "🌶️", "text": "את החריפות של פלפלים מודדים בסולם סקוביל, שנקרא על שם הרוקח וילבר סקוביל שהמציא אותו ב־1912."}], "gallery": [{"src": "images/poster.jpg", "caption": "יריד סוף השנה של הפקולטה"}], "ideas": {"text": "רעיון לאירוע, בקשה, או משהו שמפריע לכם בפקולטה? כתבו לנו. הטופס אנונימי: לא נאסף שם ולא כתובת מייל.", "formUrl": ""}, "exams": [{"name": "טיפים כלליים", "links": [], "tips": ["מבחנים משנים קודמות הם הדרך הכי טובה להבין מה באמת נשאל.", "כדאי לפתור מבחן מלא בתנאי זמן אמיתיים לפחות פעם אחת לפני המבחן."]}], "faq": [{"q": "איך פונים לוועד?", "a": "דרך תיבת ההצעות באתר, בהודעה באינסטגרם, או ישירות לאחד מחברי הוועד."}, {"q": "איך מזמינים מרצ׳?", "a": "בוחרים מוצר וצבע באתר, ממלאים את טופס ההזמנה, ומשלמים בפקולטה."}, {"q": "האם תיבת ההצעות באמת אנונימית?", "a": "כן. הטופס לא אוסף שם ולא כתובת מייל."}]}</script>
 <script id="app-js">
 (function(){
 "use strict";
@@ -237,7 +266,7 @@ function topbar(){
   return `<header class="topbar"><div class="wrap">
     <a class="brand" href="#top">${safeUrl(h.logo) ? `<img src="${esc(safeUrl(h.logo))}" alt="">` : ''}<span>${esc(h.short || h.title)}</span></a>
     <nav class="topnav" aria-label="ניווט">
-      <a href="#events">אירועים</a><a href="#team">הוועד</a><a href="#merch">מרצ׳</a><a href="#dyk">הידעת?</a><a href="#gallery">גלריה</a><a href="#ideas">רעיונות</a>
+      <a href="#events">אירועים</a><a href="#links">קישורים</a><a href="#exams">מבחנים</a><a href="#team">הוועד</a><a href="#merch">מרצ׳</a><a href="#dyk">הידעת?</a><a href="#faq">שאלות</a><a href="#ideas">רעיונות</a>
     </nav></div></header>`;
 }
 function ticket(){
@@ -249,7 +278,7 @@ function ticket(){
 }
 function hero(){
   const h = data.hero || {};
-  const links = (data.links||[]).filter(l => safeUrl(l.url));
+  const links = (data.links||[]).filter(l => safeUrl(l.url) && SOCIAL.test(l.url));
   return `<section class="wrap hero" id="top">
     <div class="logo">${media(h.logo, h.title) || ''}</div>
     <div class="txt">
@@ -260,6 +289,13 @@ function hero(){
       <div class="chips">${links.map(l => `<a class="chip" href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener"><span aria-hidden="true">${esc(l.emoji)}</span>${esc(l.label)}</a>`).join('')}
       ${editBtn('hero','כותרת ולוגו')}${editBtn('links','קישורים')}</div>
     </div></section>`;
+}
+const SOCIAL = /instagram|facebook|whatsapp|chat\.whatsapp|tiktok|t\.me|youtube/i;
+function usefulLinks(){
+  const l = (data.links||[]).filter(x => safeUrl(x.url) && !SOCIAL.test(x.url));
+  if (!l.length) return '';
+  return `<section class="wrap sec" id="links">${head('links','קישורים שימושיים','links')}<div style="height:14px"></div>
+    <div class="ulinks">${l.map(x => `<a class="ulink" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">${esc(x.emoji || '🔗')}</span><span><b>${esc(x.label)}</b>${x.desc ? `<small>${esc(x.desc)}</small>` : ''}</span></a>`).join('')}</div></section>`;
 }
 function head(id, title, sec, lead){
   return `<div class="sec-head"><h2>${title}</h2>${editBtn(sec, sec === 'products' ? 'מוצרים' : '')}</div>${lead ? `<p class="lead">${lead}</p>` : ''}`;
@@ -323,6 +359,27 @@ function dyk(){
     <div class="dyk"><div class="petri" id="petri" aria-live="polite">${colonies()}${factHtml()}</div>
     ${n > 1 ? `<button class="btn" data-act="fact">🔬 עובדה נוספת</button>` : ''}</div></section>`;
 }
+const TYPE_ICON = t => /מבחנ/.test(t) ? '📝' : /סיכומ/.test(t) ? '📚' : /הרצא|הקלט|וידאו|סרט/.test(t) ? '🎥' : '🔗';
+function courseCards(q){
+  q = String(q || '').trim().toLowerCase();
+  const list = (data.exams || []).filter(c => !q || c.name.toLowerCase().includes(q));
+  if (!list.length) return `<div class="empty-note">${q ? 'לא נמצא קורס בשם הזה.' : 'חומרים למבחנים יעלו כאן בקרוב.'}</div>`;
+  return `<div class="courses">${list.map(c => `<article class="course"><h3>${esc(c.name)}</h3>
+    ${c.links.length ? `<div class="lk">${c.links.map(l => `<a href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener"><span aria-hidden="true">${TYPE_ICON(l.type)}</span>${esc(l.label || l.type || 'קישור')}</a>`).join('')}</div>` : ''}
+    ${c.tips.length ? `<ul>${c.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</article>`).join('')}</div>`;
+}
+function exams(){
+  const n = (data.exams || []).length;
+  return `<section class="wrap sec" id="exams">${head('exams','ערכת הישרדות למבחנים','exams','מבחנים משנים קודמות, סיכומים וטיפים של מי שכבר עבר את זה.')}
+    ${n > 4 ? `<input class="search" type="search" placeholder="🔍 חיפוש קורס" aria-label="חיפוש קורס" data-search="1">` : ''}
+    <div id="courses">${courseCards('')}</div></section>`;
+}
+function faq(){
+  const f = (data.faq || []).filter(x => x.q);
+  if (!f.length) return '';
+  return `<section class="wrap sec" id="faq">${head('faq','שאלות נפוצות','faq')}<div style="height:14px"></div>
+    <div class="faq">${f.map(x => `<details><summary>${esc(x.q)}</summary><p>${esc(x.a)}</p></details>`).join('')}</div></section>`;
+}
 function gallery(){
   const g = (data.gallery||[]).filter(x => safeUrl(x.src));
   return `<section class="wrap sec" id="gallery">${head('gallery','מהאירועים שלנו','gallery')}<div style="height:14px"></div>
@@ -338,12 +395,12 @@ function footer(){
   return `<footer>${esc((data.hero||{}).title)}${ig ? `<br><a href="${esc(safeUrl(ig.url))}" target="_blank" rel="noopener">עקבו אחרינו באינסטגרם</a>` : ''}</footer>`;
 }
 function tabbar(){
-  return `<nav class="tabbar" aria-label="ניווט מהיר"><a href="#top"><span aria-hidden="true">🏠</span>בית</a><a href="#events"><span aria-hidden="true">📅</span>אירועים</a><a href="#team"><span aria-hidden="true">👋</span>הוועד</a><a href="#merch"><span aria-hidden="true">🧢</span>מרצ׳</a><a href="#ideas"><span aria-hidden="true">💡</span>רעיונות</a></nav>`;
+  return `<nav class="tabbar" aria-label="ניווט מהיר"><a href="#top"><span aria-hidden="true">🏠</span>בית</a><a href="#events"><span aria-hidden="true">📅</span>אירועים</a><a href="#exams"><span aria-hidden="true">📝</span>מבחנים</a><a href="#merch"><span aria-hidden="true">🧢</span>מרצ׳</a><a href="#ideas"><span aria-hidden="true">💡</span>רעיונות</a></nav>`;
 }
 function editChrome(){ return ''; }
 function render(){
   document.title = (data.hero||{}).title || document.title;
-  app.innerHTML = banner() + topbar() + `<main>` + hero() + events() + team() + merch() + dyk() + gallery() + ideas() + footer() + `</main>` + tabbar() + editChrome();
+  app.innerHTML = banner() + topbar() + `<main>` + hero() + events() + usefulLinks() + exams() + team() + merch() + dyk() + faq() + gallery() + ideas() + footer() + `</main>` + tabbar() + editChrome();
   tick();
 }
 function tick(){
@@ -372,10 +429,11 @@ document.addEventListener('click', e => {
     const p = document.getElementById('petri'); p.classList.remove('pop'); p.innerHTML = colonies() + factHtml(); void p.offsetWidth; p.classList.add('pop');
   }
 });
+document.addEventListener('input', e => { if (e.target.dataset && e.target.dataset.search){ const c = document.getElementById('courses'); if (c) c.innerHTML = courseCards(e.target.value); } });
 /* ---------- תוכן מגוגל שיטס ---------- */
 // מזהה הגיליון: החלק שבין /d/ ל־/edit בכתובת של הגיליון. אם ריק, האתר מציג את תוכן ברירת המחדל.
 const SHEET_ID = '17W0wgJMdBLYNNlggU0a6iVbiTJEglWSyJPZxwdYEALY';
-const TABS = {settings:'הגדרות', events:'אירועים', team:'ועד', products:'מוצרים', facts:'הידעת', gallery:'גלריה', links:'קישורים'};
+const TABS = {settings:'הגדרות', events:'אירועים', team:'ועד', products:'מוצרים', facts:'הידעת', gallery:'גלריה', links:'קישורים', exams:'מבחנים', faq:'שאלות'};
 const COLORS = {'שחור':'#1A1A1A','לבן':'#FFFFFF','כחול':'#2F5FA8','כחול כהה':'#1F2E4D','נייבי':'#1F2E4D','תכלת':'#A9CDEB','אפור':'#8A8F96','אפור כהה':'#4A4F55','ירוק':'#2E7D4F','ירוק כהה':'#1F4D36','ירוק בקבוק':'#1F4D36','מנטה':'#9ED9BB','בז':'#D9CBB0','שמנת':'#EFE9DC','קרם':'#EFE9DC','אדום':'#C0392B','בורדו':'#6D1A2A','ורוד':'#F2A7C3','סגול':'#6B4FA0','צהוב':'#F2C230','כתום':'#E67E22','חום':'#7A5230','זהב':'#D4A017'};
 
 function parseCSV(s){
@@ -451,7 +509,19 @@ function fromSheets(T){
   }
   if (T.facts) d.facts = T.facts.map(r => ({emoji: col(r,'אימוג׳י'), text: col(r,'עובדה')})).filter(f => f.text);
   if (T.gallery) d.gallery = T.gallery.map(r => ({src: img(col(r,'תמונה')), caption: col(r,'כיתוב')})).filter(x => x.src);
-  if (T.links) d.links = T.links.map(r => ({emoji: col(r,'אימוג׳י'), label: col(r,'טקסט'), url: col(r,'קישור')})).filter(l => l.label && l.url);
+  if (T.links) d.links = T.links.map(r => ({emoji: col(r,'אימוג׳י'), label: col(r,'טקסט'), url: col(r,'קישור'), desc: col(r,'תיאור')})).filter(l => l.label && l.url);
+  if (T.exams){
+    const map = new Map();
+    T.exams.forEach(r => {
+      const n = col(r,'קורס'); if (!n) return;
+      if (!map.has(n)) map.set(n, {name: n, links: [], tips: []});
+      const c = map.get(n), url = safeUrl(col(r,'קישור')), type = col(r,'סוג'), note = col(r,'הערה');
+      if (url) c.links.push({type, url, label: note || type});
+      else if (note) c.tips.push(note);
+    });
+    d.exams = [...map.values()].filter(c => c.links.length || c.tips.length);
+  }
+  if (T.faq) d.faq = T.faq.map(r => ({q: col(r,'שאלה'), a: col(r,'תשובה')})).filter(x => x.q);
   return d;
 }
 function setData(d){
