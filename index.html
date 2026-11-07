@@ -433,7 +433,8 @@ document.addEventListener('input', e => { if (e.target.dataset && e.target.datas
 /* ---------- תוכן מגוגל שיטס ---------- */
 // מזהה הגיליון: החלק שבין /d/ ל־/edit בכתובת של הגיליון. אם ריק, האתר מציג את תוכן ברירת המחדל.
 const SHEET_ID = '17W0wgJMdBLYNNlggU0a6iVbiTJEglWSyJPZxwdYEALY';
-const TABS = {settings:'הגדרות', events:'אירועים', team:'ועד', products:'מוצרים', facts:'הידעת', gallery:'גלריה', links:'קישורים', exams:'מבחנים', faq:'שאלות'};
+const TABS = {settings:'הגדרות', events:'אירועים', team:'ועד', products:'מוצרים', facts:'הידעת', gallery:'גלריה', links:'קישורים', exams:'מבחנים', faq:'שאלות', images:'תמונות'};
+let IMGMAP = {};
 const COLORS = {'שחור':'#1A1A1A','לבן':'#FFFFFF','כחול':'#2F5FA8','כחול כהה':'#1F2E4D','נייבי':'#1F2E4D','תכלת':'#A9CDEB','אפור':'#8A8F96','אפור כהה':'#4A4F55','ירוק':'#2E7D4F','ירוק כהה':'#1F4D36','ירוק בקבוק':'#1F4D36','מנטה':'#9ED9BB','בז':'#D9CBB0','שמנת':'#EFE9DC','קרם':'#EFE9DC','אדום':'#C0392B','בורדו':'#6D1A2A','ורוד':'#F2A7C3','סגול':'#6B4FA0','צהוב':'#F2C230','כתום':'#E67E22','חום':'#7A5230','זהב':'#D4A017'};
 
 function parseCSV(s){
@@ -461,6 +462,8 @@ function img(v){
   const g = v.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:.*&)?id=)([\w-]+)/);
   if (g) return 'https://lh3.googleusercontent.com/d/' + g[1];
   if (/^https?:\/\//i.test(v)) return v;
+  const id = IMGMAP[v.toLowerCase()];
+  if (id) return 'https://lh3.googleusercontent.com/d/' + id;
   return 'images/' + v.replace(/^\/?(images\/)?/, '');
 }
 function colorHex(name, hex){
@@ -537,6 +540,8 @@ async function loadSheets(){
       .then(r => r.ok ? r.text() : null).then(s => s == null || /^\s*</.test(s) ? null : toObjects(parseCSV(s))).catch(() => null)));
   if (res.every(x => x == null)) return;
   const T = {}; keys.forEach((k,i) => T[k] = res[i]);
+  IMGMAP = {};
+  (T.images || []).forEach(r => { const n = col(r,'שם קובץ').toLowerCase(), id = col(r,'מזהה'); if (n && id && !IMGMAP[n]) IMGMAP[n] = id; });
   const d = fromSheets(T);
   try { localStorage.setItem('vaad-data', JSON.stringify(d)); } catch(e){}
   setData(d);
